@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Find and book comfortable bus journeys with Roam.">
+  <title>Roam — Bus journeys, made easy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Roam home"><span class="brand-mark">r</span><span>roam<span class="brand-dot">.</span></span></a>
+    <nav class="nav-links"><a class="active" href="#home">Bus tickets</a><a href="#trips">My trips</a><a href="#help">Help</a></nav>
+    <button class="profile" aria-label="Profile"><span class="profile-icon">●</span><span>Sign in</span></button>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT ADVENTURE STARTS HERE</div>
+        <h1>Go further.<br><span>Feel closer.</span></h1>
+        <p class="hero-copy">The easiest way to find your seat and see where the road takes you.</p>
+        <div class="search-card">
+          <div class="field-group route-fields">
+            <label class="field"><span class="field-icon pin">●</span><span class="field-content"><span class="field-label">FROM</span><select id="from"><option>New York</option><option>Boston</option><option>Washington, DC</option><option>Philadelphia</option><option>Chicago</option><option>Los Angeles</option><option>San Francisco</option><option>Seattle</option><option>Portland</option><option>Austin</option><option>Denver</option><option>Miami</option></select></span></label>
+            <button class="swap" id="swap" aria-label="Swap cities">↔</button>
+            <label class="field"><span class="field-icon destination">●</span><span class="field-content"><span class="field-label">TO</span><select id="to"><option>Boston</option><option>New York</option><option>Washington, DC</option><option>Philadelphia</option><option>Chicago</option><option>Los Angeles</option><option>San Francisco</option><option>Seattle</option><option>Portland</option><option>Austin</option><option>Denver</option><option>Miami</option></select></span></label>
+          </div>
+          <div class="field-group date-fields">
+            <label class="field"><span class="field-icon calendar">▦</span><span class="field-content"><span class="field-label">DEPARTURE</span><input id="travel-date" type="date"></span></label>
+            <label class="field"><span class="field-icon passengers">♙</span><span class="field-content"><span class="field-label">PASSENGERS</span><select id="passengers"><option value="1">1 passenger</option><option value="2">2 passengers</option><option value="3">3 passengers</option><option value="4">4 passengers</option></select></span></label>
+          </div>
+          <button id="search-btn" class="search-btn"><span>Find my bus</span><span>→</span></button>
+        </div>
+        <div class="trust-row"><span>✦ &nbsp;Secure booking</span><span>✦ &nbsp;Best price guarantee</span><span>✦ &nbsp;24/7 support</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="horizon"></div><div class="road-line"></div><div class="bus"><div class="bus-top"><i></i><i></i><i></i><i></i></div><div class="bus-front"></div><div class="bus-base"></div><div class="wheel wheel-one"></div><div class="wheel wheel-two"></div></div><div class="hill hill-one"></div><div class="hill hill-two"></div><div class="art-caption"><span>TAKE THE SCENIC ROUTE</span><b>Every mile, a new story.</b></div></div>
+    </section>
+    <section class="results-section" id="trips">
+      <div class="section-heading"><div><div class="eyebrow muted-eyebrow">HANDPICKED FOR YOUR NEXT TRIP</div><h2>Popular journeys</h2></div><button id="see-all" class="text-link">See all routes <span>→</span></button></div>
+      <div class="route-grid">
+        <button class="route-card" data-from="New York" data-to="Boston"><span class="route-visual visual-boston"><span class="skyline">▥ ▤ ▦</span><span class="route-city">BOSTON</span></span><span class="route-meta"><span><strong>New York <i>→</i> Boston</strong><small>From <b>$24</b> · 4h 15m</small></span><span class="arrow-circle">↗</span></span></button>
+        <button class="route-card" data-from="New York" data-to="Washington, DC"><span class="route-visual visual-dc"><span class="skyline">⌂ ♙ ⌂</span><span class="route-city">WASHINGTON, DC</span></span><span class="route-meta"><span><strong>New York <i>→</i> Washington, DC</strong><small>From <b>$29</b> · 4h 45m</small></span><span class="arrow-circle">↗</span></span></button>
+        <button class="route-card" data-from="San Francisco" data-to="Los Angeles"><span class="route-visual visual-la"><span class="skyline">☼ ▥ ☼</span><span class="route-city">LOS ANGELES</span></span><span class="route-meta"><span><strong>San Francisco <i>→</i> Los Angeles</strong><small>From <b>$35</b> · 6h 30m</small></span><span class="arrow-circle">↗</span></span></button>
+      </div>
+    </section>
+    <section class="why-section"><div class="why-copy"><div class="eyebrow muted-eyebrow">A BETTER WAY TO GET THERE</div><h2>Good trips.<br><span>Good for you.</span></h2><p>More than a ride. It's a little extra legroom, a window seat with a view, and one less thing to worry about.</p></div><div class="benefits"><div class="benefit"><span class="benefit-icon icon-leaf">✳</span><div><strong>Travel lighter</strong><p>Modern coaches with fewer emissions per mile.</p></div></div><div class="benefit"><span class="benefit-icon icon-star">✦</span><div><strong>Comfort comes standard</strong><p>Recline, recharge, and stay connected onboard.</p></div></div><div class="benefit"><span class="benefit-icon icon-heart">♡</span><div><strong>Plans change. It's okay.</strong><p>Easy changes and friendly humans ready to help.</p></div></div></div></section>
+    <footer id="help"><a class="brand footer-brand" href="#home"><span class="brand-mark">r</span><span>roam<span class="brand-dot">.</span></span></a><span>Take the scenic route. © 2025 Roam Travel</span><a href="mailto:hello@roam.example">Need a hand? Get in touch ↗</a></footer>
+  </main>
+  <div id="modal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-btn" data-close aria-label="Close">×</button><div id="modal-content"></div></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
